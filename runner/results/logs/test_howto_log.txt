@@ -1,0 +1,28 @@
+
+Running 17 tests using 1 worker
+
+[1A[2K[1/17] tests\generated_howto.spec.ts:4:7 â€º QA Agent Generated Tests â€º Create Interview with Job Description
+[1A[2K[2/17] tests\generated_howto.spec.ts:11:7 â€º QA Agent Generated Tests â€º Select AI Avatar for Advanced Plan Users
+[1A[2K[3/17] tests\generated_howto.spec.ts:15:7 â€º QA Agent Generated Tests â€º Create Job Description from Job Title
+[1A[2K[4/17] tests\generated_howto.spec.ts:22:7 â€º QA Agent Generated Tests â€º Skill Recommendations from Job Description
+[1A[2K[5/17] tests\generated_howto.spec.ts:29:7 â€º QA Agent Generated Tests â€º Set Question Difficulty Level
+[1A[2K[6/17] tests\generated_howto.spec.ts:35:7 â€º QA Agent Generated Tests â€º AI Suggests Standard and Role-Based Questions
+[1A[2K[7/17] tests\generated_howto.spec.ts:41:7 â€º QA Agent Generated Tests â€º Add, Remove, and Reorder Questions
+[1A[2K[8/17] tests\generated_howto.spec.ts:47:7 â€º QA Agent Generated Tests â€º Modify Role-Based Questions and Ideal Answers
+[1A[2K[9/17] tests\generated_howto.spec.ts:52:7 â€º QA Agent Generated Tests â€º Create Interview and Access Public Link
+[1A[2K[10/17] tests\generated_howto.spec.ts:57:7 â€º QA Agent Generated Tests â€º Candidate Applies Using Public Link
+[1A[2K[11/17] tests\generated_howto.spec.ts:63:7 â€º QA Agent Generated Tests â€º Resume-Based Threshold Screening
+[1A[2K[12/17] tests\generated_howto.spec.ts:70:7 â€º QA Agent Generated Tests â€º View Candidate Responses and Scores
+[1A[2K[13/17] tests\generated_howto.spec.ts:75:7 â€º QA Agent Generated Tests â€º Detailed Interview Scoring and Summary
+[1A[2K[14/17] tests\generated_howto.spec.ts:82:7 â€º QA Agent Generated Tests â€º Screen Multiple Resumes Against Job Description
+[1A[2K[15/17] tests\generated_howto.spec.ts:88:7 â€º QA Agent Generated Tests â€º AI Recommendation on Candidate Advancement
+[1A[2K[16/17] tests\generated_howto.spec.ts:93:7 â€º QA Agent Generated Tests â€º Send Interview Link to Candidates
+[1A[2K[17/17] tests\generated_howto.spec.ts:98:7 â€º QA Agent Generated Tests â€º Initiate Interview Screening Post-Submission
+[1A[2K  17 passed (6.9s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
+
+[stderr]

@@ -1,41 +1,19 @@
-# === Python ===
-__pycache__/
-*.py[cod]
-*.pyo
-*.log
+# === HuggingFace Transformers / Whisper / MiniLM caches ===
+~/.cache/
+.cache/
+**/whisper/
+**/openai/
+**/aiminilm/
+**/transformers/
+**/sentence_transformers/
 
-# === Virtual Environments ===
-venv/
-env/
-ENV/
+# === LangChain vector store ===
+faiss_index/
 
-# === Jupyter Notebooks ===
-.ipynb_checkpoints/
-
-# === OS Files ===
-.DS_Store
-Thumbs.db
-
-# === Model & Transcripts ===
+# === Audio/Video/Transcript Files ===
 uploaded_videos/
 generator/output/
-faiss_index/
 *.mp4
 *.wav
 *.srt
 *.vtt
-
-# === Playwright Test Artifacts ===
-*.zip
-*.pdf
-scripts/tests/generated.spec.ts
-runner/results/
-runner/fonts/
-
-# === IDEs ===
-.vscode/
-.idea/
-
-# === Environment Variables ===
-.env
-*.env
