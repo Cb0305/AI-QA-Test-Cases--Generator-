@@ -1,0 +1,9 @@
+openai-whisper
+yt-dlp
+langchain
+faiss-cpu
+openai
+streamlit
+tiktoken
+python-dotenv
+langchain-community
