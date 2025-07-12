@@ -17,3 +17,10 @@ generator/output/
 *.wav
 *.srt
 *.vtt
+# Hugging Face & Whisper cache
+**/whisper_cache/
+**/.hf_cache/
+**/generator/models_cache/
+**/models--*/snapshots/
+*.safetensors
+*.pt
