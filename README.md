@@ -1,31 +1,34 @@
-⚙️ QA Agent Dashboard
+# ⚙️ AI-QA Test Cases -Generator
 
-QA Agent is a powerful Streamlit-based tool designed to automate test generation and execution from instructional videos using Whisper transcription and Playwright testing.
-It enables users to:
+AI-QA Test Cases -Generator is a powerful Streamlit-based automation tool designed to generate and validate test cases from instructional videos using AI models like Whisper, MiniLM, and Playwright.
 
-Upload videos
+This assistant allows users to:
 
-Auto-generate test prompts
+* 🎥 Upload instructional videos
+* 🧠 Auto-generate prompts and test cases
+* 📄 Upload or convert JSON to Playwright scripts
+* 🧪 Run tests and capture results
+* 📤 Export reports to PDF and optionally email them
 
-Upload/convert test cases
+---
 
-Execute tests and generate reports
+## 🚀 Features
 
-Export results to PDF and send via email
-
-🚀 Features
 ✅ Upload instructional videos (MP4/MOV/AVI/MKV)
-✅ Transcribe with OpenAI Whisper (tiny, base, etc.)
-✅ Auto-generate prompts to create structured test cases
+✅ Transcribe using OpenAI Whisper (tiny, base, etc.)
+✅ Auto-generate structured prompts from transcriptions
 ✅ Upload JSON test cases and convert to Playwright scripts
-✅ Run Playwright tests and capture logs
-✅ Generate PDF reports from test results
-✅ Email reports with Gmail SMTP
-✅ View/download/delete all past logs, prompts, and PDFs
+✅ Run Playwright tests and view detailed execution logs
+✅ Generate professional PDF reports
+✅ Email reports via Gmail SMTP
+✅ Manage and clean all uploaded, generated, and report files
 
-📁 Project Structure
+---
 
-qa_agent/
+## 📁 Project Structure
+
+```
+qa/
 ├── generator/
 │   ├── transcribe_video.py
 │   ├── chunk_and_embed.py
@@ -33,7 +36,7 @@ qa_agent/
 │   └── output/
 ├── scripts/
 │   ├── convert_json_to_playwright.py
-│   ├── tests/
+│   └── tests/
 ├── runner/
 │   ├── run_tests.py
 │   ├── run_playwright.sh
@@ -44,71 +47,98 @@ qa_agent/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+```
 
-🛠️ Setup Instructions
-1. Clone the Repository
+---
 
-git clone https://github.com/<your-username>/QAAgent-Task---Chinna-Bathina.git
-cd QAAgent-Task---Chinna-Bathina
+## 🛠️ Setup Instructions
 
-2. Create Virtual Environment
+### 1. Clone the Repository
+
+
+git clone https://github.com/Cb0305/AI-QA-Test-Cases-Generator.git
+
+
+### 2. Create Virtual Environment
+
 
 python -m venv venv
-venv\Scripts\activate  # Windows
+venv\Scripts\activate  # On Windows
 
-3. Install Dependencies
+
+### 3. Install Dependencies
+
 pip install -r requirements.txt
 
-4. Download Required Models
-Use this script (optional):
+### 4. Download Required Models
+
+Optional script to download Whisper + MiniLM:
 
 python download_models.py
-It will:
-Download Whisper model (base)
-Download all-MiniLM-L6-v2 embeddings
 
-🧪 How to Use
-Launch the app:
+
+This downloads:
+
+* Whisper (base)
+* all-MiniLM-L6-v2 (via sentence-transformers)
+
+---
+
+## 🧪 How to Use
+
+Start the app:
+
 streamlit run dashboard/app.py
 
-Step-by-step workflow:
 
-🔼 Upload a video (max 50MB)
-🔠 Transcription auto-generated using Whisper
-📝 Prompt generated to guide test case creation (manually via ChatGPT)
-🔽 Upload the JSON test cases
-🧪 Tests are auto-converted to Playwright and executed
-📄 PDF reports are generated from test logs
-📧 Optionally email report via Gmail
+### 🔄 Workflow:
 
-📤 Environment Variables
-To use the email feature, set your Gmail credentials:
+1. 🔼 Upload a video (Max 50MB)
+2. 🔠 Automatic audio transcription using Whisper
+3. 📝 Prompt generated for test case design (ChatGPT or manual)
+4. ⬇️ Upload JSON test cases
+5. 🧪 Playwright tests are auto-generated and executed
+6. 📄 PDF test reports generated
+7. 📧 Optionally send via email
 
-# .env or system env
-SMTP_USER=your_gmail_address@gmail.com
+---
+
+## 📤 Environment Variables
+
+To enable email sending, set Gmail credentials:
+
+
+# In .env or system environment
+SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_app_password
-You must generate an App Password from your Google account.
+```
 
-📦 Dependencies
-Major packages used:
+Use a [Google App Password](https://support.google.com/accounts/answer/185833?hl=en) for security.
 
-streamlit
-whisper
-transformers / sentence-transformers
-fpdf
-matplotlib
-playwright
-smtplib / email
+---
 
-📄 Output Files
-generator/output/: Transcripts, prompts, and JSON test cases
+## 📦 Major Dependencies
 
-runner/results/logs/: Logs and test results
+* `streamlit`
+* `openai-whisper`
+* `sentence-transformers`
+* `playwright`
+* `fpdf`
+* `matplotlib`
+* `smtplib`, `email`
 
-runner/results/test_bundle.zip: Exported test files
+---
 
-runner/results/*.pdf: Final QA test reports
+## 📄 Output Locations
 
-🧹 Clean Git Setup
-This repo excludes heavy models and caches. Large files like .pt and .safetensors are ignored via .gitignore.
-Use download_models.py to fetch models locally.
+* `generator/output/` – Transcripts, prompts, and test cases
+* `runner/results/logs/` – Playwright test logs
+* `runner/results/test_bundle.zip` – Zipped test data
+* `runner/results/*.pdf` – Final reports
+
+
+## 🧹 Clean Git Setup
+
+* Large model files (`*.pt`, `*.safetensors`) are excluded via `.gitignore`
+* Use `download_models.py` to set up locally
+
